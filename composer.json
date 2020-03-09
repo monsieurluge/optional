@@ -1,0 +1,23 @@
+{
+    "name": "monsieurluge/optional",
+    "type": "library",
+    "license": "The Unlicense",
+    "description": "Optional-oriented objects",
+    "authors": [
+        {
+            "name": "Laurent Vergé",
+            "email": "monsieurluge@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "monsieurluge\\Optional\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpmd/phpmd" : "@stable",
+        "phpstan/phpstan": "@stable",
+        "phpunit/phpunit": "*"
+    }
+}
