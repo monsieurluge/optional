@@ -11,6 +11,9 @@ class Just implements Maybe
     /** @var mixed */
     private $value;
 
+    /**
+     * @param mixed $value
+     */
     public function __construct($value)
     {
         if (true === is_null($value)) {
