@@ -12,7 +12,7 @@ final class NothingTest extends TestCase
      */
     public function testDefaultValueIsExtracted()
     {
-        // GIVEN nothing
+        // GIVEN a "nothing"
         $nothing = new Nothing();
 
         // WHEN the value is extracted
@@ -28,7 +28,7 @@ final class NothingTest extends TestCase
      */
     public function testMapDoesNothing()
     {
-        // GIVEN nothing
+        // GIVEN a "nothing"
         $nothing = new Nothing();
 
         // WHEN a "to uppercase" transformation is mapped
