@@ -12,13 +12,13 @@ final class JustTest extends TestCase
      */
     public function testCanExtractTheValue()
     {
-        // GIVEN "just a value"
+        // GIVEN "just a text"
         $just = new Just('foo bar');
 
-        // WHEN the value is extracted
+        // WHEN the text is extracted
         $value = $just->getOr('nothing in here');
 
-        // THEN the value is as expected
+        // THEN the text is as expected
         $this->assertSame('foo bar', $value);
     }
 }
