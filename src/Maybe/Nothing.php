@@ -28,6 +28,6 @@ class Nothing implements Maybe
      */
     public function map(Closure $transformation): Maybe
     {
-        throw new \RuntimeException(sprintf('method %s::%s not implemented', __CLASS__, __FUNCTION__));
+        return $this;
     }
 }
