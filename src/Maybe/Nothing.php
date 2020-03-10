@@ -12,7 +12,7 @@ class Nothing implements Maybe
      */
     public function bind(Closure $action): Maybe
     {
-        throw new \RuntimeException(sprintf('method %s::%s not implemented', __CLASS__, __FUNCTION__));
+        return $this;
     }
 
     /**
