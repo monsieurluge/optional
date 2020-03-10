@@ -1,7 +1,7 @@
 {
     "name": "monsieurluge/optional",
     "type": "library",
-    "license": "The Unlicense",
+    "license": "Unlicense",
     "description": "Optional-oriented objects",
     "authors": [
         {
