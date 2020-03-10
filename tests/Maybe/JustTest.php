@@ -2,11 +2,22 @@
 
 namespace monsieurluge\OptionalTests\Maybe;
 
+use InvalidArgumentException;
 use monsieurluge\Optional\Maybe\Just;
 use PHPUnit\Framework\TestCase;
 
 final class JustTest extends TestCase
 {
+    /**
+     * @covers Just::__construct
+     */
+    public function testNullishValueIsNotAllowed()
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        new Just(null);
+    }
+
     /**
      * @covers Just::getOr
      */
