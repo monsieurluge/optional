@@ -12,7 +12,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "monsieurluge\\Optional\\": "src/",
+            "monsieurluge\\Optional\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "monsieurluge\\OptionalTests\\": "tests/"
         }
     },
