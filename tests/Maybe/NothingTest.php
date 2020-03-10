@@ -2,6 +2,7 @@
 
 namespace monsieurluge\OptionalTests\Maybe;
 
+use monsieurluge\Optional\Maybe\Just;
 use monsieurluge\Optional\Maybe\Nothing;
 use PHPUnit\Framework\TestCase;
 
@@ -38,5 +39,25 @@ final class NothingTest extends TestCase
         $this->assertSame('nothing in here', $nothing->getOr('nothing in here'));
         // AND the extracted text is the default one
         $this->assertSame('default value', $uppercased->getOr('default value'));
+    }
+
+    /**
+     * @covers Nothing::bind
+     * @covers Nothing::getOr
+     */
+    public function testBindDoesNothing()
+    {
+        // GIVEN a "nothing"
+        $nothing = new Nothing();
+        // AND the function to bind to, which returns a "just a text"
+        $action = function () { return new Just('foo bar'); };
+
+        // WHEN the action is binded
+        $final = $nothing->bind($action);
+
+        // THEN the origin is still nothing
+        $this->assertSame('nothing in here', $nothing->getOr('nothing in here'));
+        // AND the extracted text is the default one
+        $this->assertSame('default value', $final->getOr('default value'));
     }
 }
