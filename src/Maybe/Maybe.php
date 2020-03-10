@@ -1,6 +1,6 @@
 <?php
 
-namespace monsieurluge\Optional;
+namespace monsieurluge\Optional\Maybe;
 
 use Closure;
 
